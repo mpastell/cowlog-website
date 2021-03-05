@@ -1,0 +1,196 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>CowLog - CowLog 3 manual</title>
+
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <meta name="description" content="CowLog - open source behavioral coding software">
+    <meta name="keywords" content="CowLog,Behavioral coding,
+	  video coding,live coding,Ethology">
+
+    <meta name="generator" content="nanoc 3.2.3">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/bootstrap-3.3.5/css/bootstrap.min.css" media="screen"/>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+
+    </script>
+
+    <!-- Favicons
+	 ================================================== -->
+    <link rel="shortcut icon" href="images/favicon.png">
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32721103-1']);
+  _gaq.push(['_setDomainName', 'cowlog.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<style>
+
+.header {
+  background: #444;
+  color : white;
+}
+
+.topnav {
+  background: #222;
+  border : 0px;
+  margin-bottom: 0px;
+}
+
+img.header
+{
+  vertical-align: baseline;
+  margin-top: 10px;
+  margin-bottom : 10px;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+</style>
+
+</head>
+<body>
+  <div class="header">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-10">
+        <h1>CowLog<small> - code behaviors from digital video</small></h1>
+      </div>
+      <div class="col-md-1">
+        <img src="/images/almod.png" class="header" height="50px" >
+      </div>
+    </div>
+</div>
+</div>
+
+<div class="topnav">
+  <div class="container">
+	   <nav class="navbar navbar-inverse topnav">
+        <div class="navbar-header topnav">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#cowbar" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">Home</a>
+    </div>
+ <div class="collapse navbar-collapse" id="cowbar">
+  	  <ul class="nav navbar-nav">
+        <li><a href="/cowlog3/">CowLog 3!</a></li>
+        <li><a href="/help/">Manual</a></li>
+        <li><a href="/download/">Downloads</a></li>
+  	    <li><a href="/publications/">Publications</a></li>
+  	    <li><a href="/screenshots/">Screenshots</a></li>
+  	    <li><a href="/mailing-list/">Mailing list</a></li>
+  	  </ul>
+    </div>
+    </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+	<div class="col-md-12">
+
+	  <h2>CowLog 3 manual</h2>
+
+	  
+<h4>Table of contents</h4>
+<ul>
+<li><a href="#setting-up-a-project">Setting up a project</a></li>
+<li><a href="#coding-and-saving">Coding and saving</a></li>
+<li><a href="#built-in-keyboard-shortcuts">Built-in keyboard shortcuts</a></li>
+<li><a href="#analysis">Analysis</a></li>
+<li><a href="#video-players-and-supported-video-formats">Video players and supported video formats</a></li>
+<li><a href="#converting-videos-to-suitable-codecs">Converting videos to suitable codecs</a></li>
+<li><a href="#citing-cowlog">Citing CowLog</a></li>
+<li><a href="#license">License</a></li>
+<li><a href="#bug-reports">Bug reports</a></li>
+<li><a href="#development">Development</a></li>
+</ul>
+<h4 id="setting-up-a-project">Setting up a project</h4>
+<p>You can set up a project from the <code>Project</code>-menu. After you have created a project you can load and edit it later.</p>
+<p>You can choose the number of behavioral classes and behaviors and set the names of the classes and set keyboard shortcuts for coding.</p>
+<p>You can also choose to use modifiers, in which case the video will pause when a behavior with modifiers is selected. Modifier names are give as a comma separated list to a text input box, they can be from any main behavioral class.</p>
+<p>The project output directory will be used to store the coded files.</p>
+<h4 id="coding-and-saving">Coding and saving</h4>
+<p>Click the New subject button to open video(s) and set subject name and the date and time the video was recorded. If you don’t set a recording time, the start time of coding session will be used.</p>
+<p>You can also open multiple videos. There is no limit on the amount of concurrently open videos and the actual number you can use depends on the speed of your computer.</p>
+<p>After you have finished coding remember to click the <code>End coding</code> button</p>
+<p><strong>The result format depends on he selected configuration.</strong></p>
+<p>If there are no modifiers the result format has three columns:</p>
+<ol style="list-style-type: decimal">
+<li>Time. Seconds from beginning.</li>
+<li>Code. The behavioral code.</li>
+<li>Class. The class that the code belongs to.</li>
+</ol>
+<p>If modifiers are used there are result format will be slightly different: The first column will contain the time and the following columns contains the behavioral codes followed by potential modifiers.</p>
+<h4 id="built-in-keyboard-shortcuts">Built-in keyboard shortcuts</h4>
+<p>CowLog has the following keyboard shortcuts, that can be used when the coding window has focus:</p>
+<p><code>Ctrl+P</code> toggle play/pause</p>
+<p><code><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></code> Seek backward in video</p>
+<p><code><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></code> Seek forward in video</p>
+<h4 id="analysis">Analysis</h4>
+<p>It is up to you to analyse your code. We usually use custom R scripts. The <code>Animal</code>-package mentioned in our paper is not currently available for this version of CowLog. I haven’t had the time to maintain it.</p>
+<h4 id="video-players-and-supported-video-formats">Video players and supported video formats</h4>
+<p>CowLog 3 can use HTML5-video player or <a href="http://videolan.org">VLC</a> player to play the videos. You can set the used player in the project preferences. VLC player is packaged is Windows and OS X version, but you need to install it separately on Linux.</p>
+<p>I recommend that you try both players in the start of the new project to see which works better with your video codec.</p>
+<p><strong>HTML5 player</strong> supports the following formats:</p>
+<ul>
+<li>MP4 H.264</li>
+<li>WebM</li>
+<li>Ogg Theora Vorbis</li>
+</ul>
+<p>See <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats" class="uri">https://developer.mozilla.org/en-US/docs/Web/HTML/Supported_media_formats</a> for more info.</p>
+<p><strong>VLC player</strong> supported formats are listed on VLC website: <a href="http://www.videolan.org/vlc/features.php?cat=video" class="uri">http://www.videolan.org/vlc/features.php?cat=video</a>. If you can play your video using the VLC player it should work with CowLog.</p>
+<h4 id="converting-videos-to-suitable-codecs">Converting videos to suitable codecs</h4>
+<p>If your codec does not work well (this most often occurs with .wmv files) you can use e.g. one the following programs to convert video to compatible format:</p>
+<ul>
+<li><a href="http://handbrake.fr/">Handbrake</a> convert to MP4 for Chrome.</li>
+<li><a href="http://www.mirovideoconverter.com/">MiroVideoConverter</a> convert to MP4 (Chrome), and Ogg or VP8 for Chrome of Firefox.</li>
+<li><a href="http://v2v.cc/~j/ffmpeg2theora/">ffmpeg2theora</a> convert to Ogg for Chrome or Firefox.</li>
+</ul>
+<h4 id="citing-cowlog">Citing CowLog</h4>
+<p><strong>Citation:</strong> Hänninen, L. &amp; Pastell, M. 2009. CowLog: Open source software for coding behaviors from digital video. Behavior Research Methods. 41(2), 472-476.</p>
+<h4 id="license">License</h4>
+<p>This software is licensed under the GNU GPL v2 license.</p>
+<h4 id="bug-reports">Bug reports</h4>
+<p>Report bugs on Github <a href="https://github.com/mpastell/CowLog" class="uri">https://github.com/mpastell/CowLog</a> or via e-mail.</p>
+<h4 id="development">Development</h4>
+<p>This version of CowLog is developed using HTML5 and Javascript using the <a href="http://electron.atom.io/">Electron</a> framework.</p>
+<p>The program uses the following components:</p>
+<ul>
+<li><a href="https://github.com/RSATom/WebChimera.js">WebChimera.js</a></li>
+<li><a href="https://jquery.com/">jQuery</a></li>
+<li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+<li><a href="http://videolan.org">VLC player</a></li>
+</ul>
+<p>The development is hosted on Github <a href="https://github.com/mpastell/CowLog" class="uri">https://github.com/mpastell/CowLog</a> Contributors are welcome!</p>
+
+
+<div class="row col-md-12"
+<p><small>&copy; <a href="http://mpastell.com/">Matti Pastell</a> 2009-2016.</small></p>
+</div>
+</div>
+
+
+
+</div><!-- Content -->
+
+  </body>
+</html>
